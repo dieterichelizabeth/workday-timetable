@@ -23,7 +23,6 @@ Done Step 3:
 Step 4: styling
     - button styling for the save
     - font styling
-Step 5: beta test with no hard-coded hourly tasks
 
 Improvements: how to create a for loop with jQuery
 Is jQuery an API?
