@@ -2,17 +2,14 @@ var schedule = {};
 
 // Loads planner from local storage
 var loadPlanner = function() {
-    schedule = JSON.parse(localStorage.getItem("Hourly Schedule"));
+    schedule = JSON.parse(localStorage.getItem("Time Table"));
     // if nothing in local storage, create the new day planner array
     if (!schedule) {
       schedule = {
         time: [9+" am", 10+" am", 11+" am", 12+" pm", 1+" pm", 2+" pm", 3+" pm", 4+" pm", 5+" pm"],
         hourlyTask: ["drink coffee", "run errands", "homework", "shower", "eat", "run", "project", "challenge", "zoom" ],
       };
-      console.log(schedule);
-      // targets 2pm
-      console.log(schedule.time[5]);
-      console.log(schedule.hourlyTask[5]);
+      // console.log(schedule);
 
     // tasks are saved in an aray that's a property of an object
     localStorage.setItem("Time Table", JSON.stringify(schedule));
@@ -42,7 +39,6 @@ var getTime = function(schedule) {
 
     // loop over current time/display
     for (let i = 0; i < 9; i++) { 
-    // convert the 9-5 to military time for the conditional statement!
       // create a variable to moniter time
       var transfer = schedule.time[i].split(" ");
       // grabs "am"/"pm"
@@ -52,6 +48,7 @@ var getTime = function(schedule) {
       let timeNumber = parseInt(timeString);
   
       var night = "pm";
+      // Conditional statement to determine background color
         // if the time variable is "pm" (and it is not 12!) + 12 
         if (dayNight === night && timeNumber != 12){
           // add 12
@@ -64,7 +61,7 @@ var getTime = function(schedule) {
           // console.log("Military Time =", newTime);
         }
 
-    // grab the time blocks BUT change the id="hourTask' background color
+    // Change the background color
         if (newTime < currentTime){
           // grey = past
           $('#hourTask' + i).addClass("bg-secondary");
@@ -89,7 +86,7 @@ $("div").on("click", "p", function() {
     // remove any extra white space before or after
     .trim();
 
-  // adds a dynamic textarea element w/ previous task description populated
+  // adds a dynamic "textarea" element w/ previous task description populated
   var changeTaskDescription = $("<textarea>")
   .addClass("form-control col-8")
   .val(taskdescription)
@@ -99,25 +96,25 @@ $("div").on("click", "p", function() {
   $(this).replaceWith(changeTaskDescription);
 
   // console logs the element
-  console.log(this);
-  console.log(taskdescription);
+  // console.log(this);
+  // console.log(taskdescription);
 });
 
-// Click Save to Update the highlighted/edited task
+// Listens for the User to click "save" to update the highlighted/edited task
 $("div").on("click", "button", function() {
   // get the textarea's current value/text
   var newTaskDescription = $('#taskChange')
     .val()
     .trim();
-  console.log(newTaskDescription);  
+  // console.log(newTaskDescription);  
   
-  // console.log(this.id); // GETS THE ID!!!  
+  // GETS THE ID # !!!  
   var hourTracker = $('#taskChange').parent().attr('id')
   var getID = hourTracker.split("");
   var forID = getID[9]
-  console.log(forID);
+  // console.log(forID);
   
-  // adds a dynamic textarea element w/ previous task description populated
+  // Revert to the "p" element upon "save" for the timetable
   var saveTaskDescription = $("<p>")
   .attr('id', 'hourTask' + forID)
   .addClass("col-8 p-3")
@@ -126,20 +123,23 @@ $("div").on("click", "button", function() {
   // replaces the old text input with the new text input
   $('#taskChange').replaceWith(saveTaskDescription);
 
-saveUpdate(forID, newTaskDescription);
-// getTime();
+  // Move to update Local Storage
+  saveUpdate(forID, newTaskDescription);
 });
 
 // Update Local Storage
 var saveUpdate = function(forID, newTaskDescription) {
-// get the local storage(string) 
-schedule = JSON.parse(localStorage.getItem("Time Table"));
+  // get the local storage(string) 
+  schedule = JSON.parse(localStorage.getItem("Time Table"));
 
-//Swap out the old value w/ the new one
-schedule.hourlyTask[forID] = newTaskDescription
+  //Swap out the old value w/ the new one
+  schedule.hourlyTask[forID] = newTaskDescription
 
-// Save to local Storage - tasks are saved in an aray that's a property of an object
-localStorage.setItem("Time Table", JSON.stringify(schedule));
+  // Save to local Storage - tasks are saved in an aray that's a property of an object
+  localStorage.setItem("Time Table", JSON.stringify(schedule));
+
+  // Pass through time function to udpate background color 
+  getTime(schedule);
 }
 
 

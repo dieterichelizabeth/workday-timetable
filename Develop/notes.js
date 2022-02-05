@@ -18,14 +18,14 @@ Step 1: Set up the HTML
     done - Center the text
     - add the Current date under the p (id currentDay)
 
-Step 2: 
+Done Step 2: 
     - add blocks of time 9,10,11,12,1,2,3,4,5 (9 total)
     - blocks should be generated w/ jQuery on load of the page
         - each "block" of time will have a text area
             - the text area will allow typing (click on and highlight)
         - each "block" of time will have a blue save button w/ disk icon
             - when the blue button is pressed, the text saves to local storage for the day
-    TO DO- changes to be saved to local storage
+    - changes to be saved to local storage
     
 Done Step 3: 
     - Time should change the color of the box (box backgrounds will start green)
