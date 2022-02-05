@@ -145,18 +145,3 @@ var saveUpdate = function(forID, newTaskDescription) {
 
 // load tasks for the first time
 loadPlanner();
-
-
-  // var txt = $('div').html();
-  // console.log(taskdescription); // consoles the task text
-  // event.preventDefault();
-  // console.log(txt); // consoles the whole damn div
-  // var help = event.target;
-  // var id = help.HTML;
-  // console.log(id);
-
-    // console.log(this.id); // GETS THE ID to push into an array!!! 
-  // const getId = this.id.split("");
-  // var idNumber = getId[8];
-  // currentID.push(idNumber);
-  // console.log(currentID);

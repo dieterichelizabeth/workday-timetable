@@ -1,8 +1,10 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-This project uses HTML, CSS, and Javascript to create a workday time-table. For the challenge, we were given starter code, which uses the [Moment.js](https://momentjs.com/) library (a "legacy" product) to work with date and time. Learn more about these other solutions in the [Moment.js project status page.](https://momentjs.com/docs/#/-project-status/).
+This project uses HTML, CSS, and Javascript to create a workday time-table. For the challenge, we were given starter code, which uses the [Moment.js](https://momentjs.com/) library (a "legacy" product) to work with date and time.
 
-Workday timetable is simple calendar app that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Based on the user story-
+("AS AN employee with a busy schedule, I WANT to add important events to a daily planner, SO THAT I can manage my time effectively.")
+Workday timetable is simple calendar app that allows the user to save events for each hour of the day. This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The app features styling by Bootstrap, Font Awesome, and Google Fonts. Developed on following criteria-
 
 ```
 GIVEN I am using a daily planner to create a schedule
@@ -21,6 +23,15 @@ THEN the saved events persist
 ```
 
 ## Documentation
+
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction//)
+- [jQuery Documentation](https://api.jquery.com/)
+- [string Split Documentation](https://www.w3schools.com/jsref/jsref_split.asp)
+- [add elements with jQuery](https://www.w3schools.com/jquery/jquery_dom_add.asp)
+- [on() method jQuery Documentation](https://api.jquery.com/on/)
+- [each() method jQuery Documentation](https://api.jquery.com/each/)
+- [setItem() Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
+- [Date() constructor and getHours() method javaScript Documentation](https://api.jquery.com/each/)
 
 ---
 
