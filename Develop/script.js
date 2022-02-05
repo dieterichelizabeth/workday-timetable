@@ -1,5 +1,4 @@
 var schedule = {};
-var currentID= [];
 
 // Loads planner from local storage
 var loadPlanner = function() {
@@ -14,6 +13,9 @@ var loadPlanner = function() {
       // targets 2pm
       console.log(schedule.time[5]);
       console.log(schedule.hourlyTask[5]);
+
+    // tasks are saved in an aray that's a property of an object
+    localStorage.setItem("Time Table", JSON.stringify(schedule));
     }
 
     // Display the timetable
@@ -54,12 +56,12 @@ var getTime = function(schedule) {
         if (dayNight === night && timeNumber != 12){
           // add 12
           var newTime = timeNumber + 12;
-          console.log("Military Time =", newTime);
+          // console.log("Military Time =", newTime);
         }
         // else "am"- do nothing. 
         else {
           var newTime = timeNumber
-          console.log("Military Time =", newTime);
+          // console.log("Military Time =", newTime);
         }
 
     // grab the time blocks BUT change the id="hourTask' background color
@@ -78,13 +80,6 @@ var getTime = function(schedule) {
         }
     }
 }
-
-// click on the task
-// brings up a textarea to change
-// once a user types, they change the text
-// when the save button is pressed, the new text replaces the old 
-// this is saved to local storage
-// create a way to target that specific # in the array...
 
 // Click on the task to highlight/edit
 $("div").on("click", "p", function() {
@@ -108,7 +103,7 @@ $("div").on("click", "p", function() {
   console.log(taskdescription);
 });
 
-// Save the clicked highlighted/edited task
+// Click Save to Update the highlighted/edited task
 $("div").on("click", "button", function() {
   // get the textarea's current value/text
   var newTaskDescription = $('#taskChange')
@@ -117,20 +112,35 @@ $("div").on("click", "button", function() {
   console.log(newTaskDescription);  
   
   // console.log(this.id); // GETS THE ID!!!  
-  // var IDS = $('#taskChange').parent().attr('id')
-  // var bleh = IDS.split("");
-  // var turtle = bleh[9]
-  // console.log(turtle);
+  var hourTracker = $('#taskChange').parent().attr('id')
+  var getID = hourTracker.split("");
+  var forID = getID[9]
+  console.log(forID);
   
   // adds a dynamic textarea element w/ previous task description populated
   var saveTaskDescription = $("<p>")
+  .attr('id', 'hourTask' + forID)
   .addClass("col-8 p-3")
-  .attr('id', 'hourTask')
   .text(newTaskDescription);
 
   // replaces the old text input with the new text input
   $('#taskChange').replaceWith(saveTaskDescription);
+
+saveUpdate(forID, newTaskDescription);
+// getTime();
 });
+
+// Update Local Storage
+var saveUpdate = function(forID, newTaskDescription) {
+// get the local storage(string) 
+schedule = JSON.parse(localStorage.getItem("Time Table"));
+
+//Swap out the old value w/ the new one
+schedule.hourlyTask[forID] = newTaskDescription
+
+// Save to local Storage - tasks are saved in an aray that's a property of an object
+localStorage.setItem("Time Table", JSON.stringify(schedule));
+}
 
 
 // load tasks for the first time
