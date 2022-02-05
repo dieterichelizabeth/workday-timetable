@@ -26,9 +26,9 @@ Step 2:
         - each "block" of time will have a blue save button w/ disk icon
             - when the blue button is pressed, the text saves to local storage for the day
     
-Step 3: 
+Done Step 3: 
     - Time should change the color of the box (box backgrounds will start green)
-    - The box will have a red background if it is that hour
+    - The box will have a blue background if it is that hour
     - the box will turn gray if the hour has passed
         - use if statements?
         - will need to be able to get the current time of the user for the function

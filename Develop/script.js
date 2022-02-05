@@ -34,7 +34,6 @@ var getTime = function(schedule) {
     // Get the current time - keep in military hours
     var current = new Date();
     var currentTime = current.getHours();
-    console.log(currentTime);
 
     // loop over current time/display
     for (let i = 0; i < 9; i++) { 
@@ -52,35 +51,27 @@ var getTime = function(schedule) {
         if (dayNight === night && timeNumber != 12){
           // add 12
           var newTime = timeNumber + 12;
-          console.log("true");
           console.log("Military Time =", newTime);
         }
         // else "am"- do nothing. 
         else {
           var newTime = timeNumber
-          console.log("false");
           console.log("Military Time =", newTime);
         }
 
     // grab the time blocks BUT change the id="hourTask' background color
-    // the if statements will console.log correctly, BUT won't change the color...
         if (newTime < currentTime){
-          console.log("It is the past");
           // grey = past
-          $('hourTask' + i).addClass("bg-secondary");
+          $('#hourTask' + i).addClass("bg-secondary");
         }
         else if (newTime > currentTime) {
           // white = future
-          console.log("it is the future");
-          console.log('hourTask' + i);
-          $('hourTask8').removeClass("col-8 bg-light p-3");
-          $('hourTask8').addClass("col-8 bg-info p-3");
+          $('#hourTask' + i).addClass("bg-success");
           
         }
         else {
           // light blue = current
-          console.log("It is the present");
-          $('hourTask' + i).addClass("bg-secondary");
+          $('#hourTask' + i).addClass("bg-danger");
         }
     }
 }
