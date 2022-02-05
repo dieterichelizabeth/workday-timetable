@@ -28,10 +28,11 @@ Step 2:
     
 Done Step 3: 
     - Time should change the color of the box (box backgrounds will start green)
-    - The box will have a blue background if it is that hour
+    - The box will have a red background if it is that hour
     - the box will turn gray if the hour has passed
-        - use if statements?
+        - use conditional statements
         - will need to be able to get the current time of the user for the function
+        - best for military time
 Step 4: 
 */
 

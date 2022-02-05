@@ -1,4 +1,5 @@
 var schedule = {};
+var currentID= [];
 
 // Loads planner from local storage
 var loadPlanner = function() {
@@ -30,9 +31,11 @@ var loadPlanner = function() {
 getTime(schedule);
 };
 
+// Track Past, Present, and Future
 var getTime = function(schedule) {
     // Get the current time - keep in military hours
     var current = new Date();
+    // gets time in military hours
     var currentTime = current.getHours();
 
     // loop over current time/display
@@ -76,5 +79,74 @@ var getTime = function(schedule) {
     }
 }
 
+// click on the task
+// brings up a textarea to change
+// once a user types, they change the text
+// when the save button is pressed, the new text replaces the old 
+// this is saved to local storage
+// create a way to target that specific # in the array...
+
+// Click on the task to highlight/edit
+$("div").on("click", "p", function() {
+  var taskdescription = $(this)
+    // gets the inner text content of the current element represented by $(this)
+    .text()
+    // remove any extra white space before or after
+    .trim();
+
+  // adds a dynamic textarea element w/ previous task description populated
+  var changeTaskDescription = $("<textarea>")
+  .addClass("form-control col-8")
+  .val(taskdescription)
+  .attr('id', 'taskChange');
+
+  // replaces the old text input with the new text input
+  $(this).replaceWith(changeTaskDescription);
+
+  // console logs the element
+  console.log(this);
+  console.log(taskdescription);
+});
+
+// Save the clicked highlighted/edited task
+$("div").on("click", "button", function() {
+  // get the textarea's current value/text
+  var newTaskDescription = $('#taskChange')
+    .val()
+    .trim();
+  console.log(newTaskDescription);  
+  
+  // console.log(this.id); // GETS THE ID!!!  
+  // var IDS = $('#taskChange').parent().attr('id')
+  // var bleh = IDS.split("");
+  // var turtle = bleh[9]
+  // console.log(turtle);
+  
+  // adds a dynamic textarea element w/ previous task description populated
+  var saveTaskDescription = $("<p>")
+  .addClass("col-8 p-3")
+  .attr('id', 'hourTask')
+  .text(newTaskDescription);
+
+  // replaces the old text input with the new text input
+  $('#taskChange').replaceWith(saveTaskDescription);
+});
+
+
 // load tasks for the first time
 loadPlanner();
+
+
+  // var txt = $('div').html();
+  // console.log(taskdescription); // consoles the task text
+  // event.preventDefault();
+  // console.log(txt); // consoles the whole damn div
+  // var help = event.target;
+  // var id = help.HTML;
+  // console.log(id);
+
+    // console.log(this.id); // GETS THE ID to push into an array!!! 
+  // const getId = this.id.split("");
+  // var idNumber = getId[8];
+  // currentID.push(idNumber);
+  // console.log(currentID);
