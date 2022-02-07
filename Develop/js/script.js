@@ -26,6 +26,11 @@ var loadPlanner = function() {
     // add the save button + styling(bootstrap)
     $('<button class="col-2">save</button>').appendTo('#hourBlock' + i);
     }
+
+// Set the date
+var todaysDate = moment().format("dddd, MMMM Do");  
+$('#currentDay').text(todaysDate); 
+
 // move to correct time backgrounds 
 getTime(schedule);
 };
