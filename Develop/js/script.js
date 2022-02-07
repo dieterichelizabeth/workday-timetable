@@ -24,7 +24,7 @@ var loadPlanner = function() {
     // add the task text + styling(bootstrap) + id
     $('<p id="hourTask' + i + '" class="col-8 p-3 mb-0">' + schedule.hourlyTask[i] + '</p>').appendTo('#hourBlock' + i);
     // add the save button + styling(bootstrap/openIcons)
-    $('<button class="col-2 btn-sm"><span class="oi oi-plus"></span></button>').appendTo('#hourBlock' + i);
+    $('<button class="col-2 btn-info rounded-right"><span class="oi oi-plus"></span></button>').appendTo('#hourBlock' + i);
     }
 
 // Set the date
@@ -122,7 +122,7 @@ $("div").on("click", "button", function() {
   // Revert to the "p" element upon "save" for the timetable
   var saveTaskDescription = $("<p>")
   .attr('id', 'hourTask' + forID)
-  .addClass("col-8 p-3")
+  .addClass("col-8 p-3 mb-0")
   .text(newTaskDescription);
 
   // replaces the old text input with the new text input

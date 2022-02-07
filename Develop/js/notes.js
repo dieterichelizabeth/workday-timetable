@@ -22,7 +22,6 @@ Step 3:
         - best for military time
 4: styling
     - button styling for the save
-    - font styling
 
 Future improvements: create a for loop w/ jQuery
 */

@@ -33,6 +33,7 @@ THEN the saved events persist
 - [setItem() Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
 - [Date() constructor and getHours() method javaScript Documentation](https://api.jquery.com/each/)
 - [Moment.js (Legacy code)](https://momentjs.com/docs/)
+- [Open Iconic](https://useiconic.com/open)
 
 ---
 
