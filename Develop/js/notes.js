@@ -23,6 +23,6 @@ Step 3:
 4: styling
     - button styling for the save
 
-Future improvements: create a for loop w/ jQuery
+Future improvements: create a for loop w/ jQuery, add a "clear" button for clearing tasks
 */
 
