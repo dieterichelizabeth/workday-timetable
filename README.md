@@ -26,7 +26,7 @@ THEN the saved events persist
 
 ## Screenshots
 
-![Example of a Schedule]("https://user-images.githubusercontent.com/95142863/152840048-eccbba23-7161-4e17-b72a-8844224109c6.png")
+![App Screenshot](https://user-images.githubusercontent.com/95142863/152840048-eccbba23-7161-4e17-b72a-8844224109c6.png)
 
 ## Documentation
 
