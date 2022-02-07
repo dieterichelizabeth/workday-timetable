@@ -24,7 +24,6 @@ Step 3:
     - button styling for the save
     - font styling
 
-Improvements: how to create a for loop with jQuery
-Is jQuery an API?
+Future improvements: create a for loop w/ jQuery
 */
 

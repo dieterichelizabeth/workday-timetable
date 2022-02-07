@@ -22,9 +22,9 @@ var loadPlanner = function() {
     // add the time text + styling(bootstrap)
     $('<p class="col-2 p-3">' + schedule.time[i] + '</p>').appendTo('#hourBlock' + i);
     // add the task text + styling(bootstrap) + id
-    $('<p id="hourTask' + i + '" class="col-8 p-3">' + schedule.hourlyTask[i] + '</p>').appendTo('#hourBlock' + i);
-    // add the save button + styling(bootstrap)
-    $('<button class="col-2">save</button>').appendTo('#hourBlock' + i);
+    $('<p id="hourTask' + i + '" class="col-8 p-3 mb-0">' + schedule.hourlyTask[i] + '</p>').appendTo('#hourBlock' + i);
+    // add the save button + styling(bootstrap/openIcons)
+    $('<button class="col-2 btn-sm"><span class="oi oi-plus"></span></button>').appendTo('#hourBlock' + i);
     }
 
 // Set the date
