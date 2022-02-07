@@ -1,10 +1,11 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# A Workday Timetable
 
-This project uses HTML, CSS, and Javascript to create a workday time-table. For the challenge, we were given starter code, which uses the [Moment.js](https://momentjs.com/) library (a "legacy" product) to work with date and time.
-
-Based on the user story-
+This project uses HTML, CSS, and Javascript to create a workday time-table. 📒 Based on the user story-
 ("AS AN employee with a busy schedule, I WANT to add important events to a daily planner, SO THAT I can manage my time effectively.")
-Workday timetable is simple calendar app that allows the user to save events for each hour of the day. This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The app features styling by Bootstrap, Font Awesome, and Google Fonts. Developed on following criteria-
+
+- Click here to [view the project](https://dieterichelizabeth.github.io/workday-timetable/)
+
+Workday timetable is simple calendar app that allows the user to save events for each hour of the day. This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The app features styling by Bootstrap, Font Awesome, Open Iconic and Google Fonts. Developed on following criteria-
 
 ```
 GIVEN I am using a daily planner to create a schedule
@@ -22,6 +23,10 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+## Screenshots
+
+![Example of a Schedule]("")
+
 ## Documentation
 
 - [Bootstrap Documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction//)
@@ -32,7 +37,7 @@ THEN the saved events persist
 - [each() method jQuery Documentation](https://api.jquery.com/each/)
 - [setItem() Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
 - [Date() constructor and getHours() method javaScript Documentation](https://api.jquery.com/each/)
-- [Moment.js (Legacy code)](https://momentjs.com/docs/)
+- [Moment.js (Legacy product)](https://momentjs.com/docs/)
 - [Open Iconic](https://useiconic.com/open)
 
 ---
