@@ -8,6 +8,10 @@ body {
   background-size: cover;
 }
 
+h1 {
+  font-size: 20px;
+}
+
 .jumbotron {
   text-align: right;
   background-color: transparent;
@@ -24,4 +28,12 @@ button {
 
 button:hover {
   transform: scale(1.05);
+}
+
+#clearbtn:hover span {
+  display: none;
+}
+
+#clearbtn:hover:before {
+  content: "clear timetable";
 }

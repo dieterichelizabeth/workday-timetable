@@ -20,7 +20,7 @@ var loadPlanner = function() {
     // add the new div and give it an ID
     $('<div id="hourBlock' + i + '"class="row col-lg-12 border-top"></div>').appendTo('#todaySchedule');
     // add the time text + styling(bootstrap)
-    $('<p class="col-2 p-3">' + schedule.time[i] + '</p>').appendTo('#hourBlock' + i);
+    $('<h1 class="col-2 p-3">' + schedule.time[i] + '</h1>').appendTo('#hourBlock' + i);
     // add the task text + styling(bootstrap) + id
     $('<p id="hourTask' + i + '" class="col-8 p-3 mb-0">' + schedule.hourlyTask[i] + '</p>').appendTo('#hourBlock' + i);
     // add the save button + styling(bootstrap/openIcons)
