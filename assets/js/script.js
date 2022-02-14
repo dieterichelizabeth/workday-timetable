@@ -24,7 +24,7 @@ var loadPlanner = function() {
     // add the task text + styling(bootstrap) + id
     $('<p id="hourTask' + i + '" class="col-8 p-3 mb-0">' + schedule.hourlyTask[i] + '</p>').appendTo('#hourBlock' + i);
     // add the save button + styling(bootstrap/openIcons)
-    $('<button class="col-2 btn-info rounded-right"><span class="oi oi-plus"></span></button>').appendTo('#hourBlock' + i);
+    $('<button class="col-2 rounded-right"><span class="oi oi-plus"></span></button>').appendTo('#hourBlock' + i);
     }
 
 // Set the date
@@ -69,16 +69,16 @@ var getTime = function(schedule) {
     // Change the background color
         if (newTime < currentTime){
           // grey = past
-          $('#hourTask' + i).addClass("bg-secondary");
+          $('#hourTask' + i).addClass("bg-dark");
         }
         else if (newTime > currentTime) {
           // white = future
-          $('#hourTask' + i).addClass("bg-success");
+          $('#hourTask' + i).addClass("bg-light");
           
         }
         else {
           // light blue = current
-          $('#hourTask' + i).addClass("bg-danger");
+          $('#hourTask' + i).addClass("bg-secondary");
         }
     }
 }
@@ -96,13 +96,10 @@ $("div").on("click", "p", function() {
   .addClass("form-control col-8")
   .val(taskdescription)
   .attr('id', 'taskChange');
+  changeTaskDescription.attr("placeholder", "Add your task here, don't forget to save -->");
 
   // replaces the old text input with the new text input
   $(this).replaceWith(changeTaskDescription);
-
-  // console logs the element
-  // console.log(this);
-  // console.log(taskdescription);
 });
 
 // Listens for the User to click "save" to update the highlighted/edited task

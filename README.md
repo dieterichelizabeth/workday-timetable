@@ -5,7 +5,7 @@ This project uses HTML, CSS, and Javascript to create a workday time-table. 📒
 
 - Click here to [view the project](https://dieterichelizabeth.github.io/workday-timetable/)
 
-Workday timetable is simple calendar app that allows the user to save events for each hour of the day. The app keeps track of time by changing the colors of the taskbox throughout the day (Grey ⚪️ for the past, Green 🟢 for the future, and Red 🔴 for the present). Users can update tasks by double clicking on the task box itself, entering the task for that time, and clicking the blue "save" button. The app stores User input, so they can return to check their schedule throughout the day.
+Workday timetable is simple calendar app that allows the user to save events for each hour of the day. The app keeps track of time by changing the colors of the taskbox throughout the day (Dark grey for the past, White for the future, and Light Grey for the present). Users can update tasks by double clicking on the task box itself, entering the task for that time, and clicking the blue "save" button. The app stores User input, so they can return to check their schedule throughout the day.
 This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The app includes styling by Bootstrap, Font Awesome, Open Iconic and Google Fonts. Developed on following criteria-
 
 ```
