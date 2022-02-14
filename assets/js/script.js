@@ -144,6 +144,18 @@ var saveUpdate = function(forID, newTaskDescription) {
   getTime(schedule);
 }
 
+// Listens User to clear the page
+$( "#clearbtn" ).click(function() {
+  schedule = {
+    time: [9+" am", 10+" am", 11+" am", 12+" pm", 1+" pm", 2+" pm", 3+" pm", 4+" pm", 5+" pm"],
+    hourlyTask: ["", "", "", "", "", "", "", "", "" ],
+  };
+
+  // tasks are saved in an aray that's a property of an object
+  localStorage.setItem("Time Table", JSON.stringify(schedule));
+
+  location.reload();
+});
 
 // load tasks for the first time
 loadPlanner();
