@@ -30,6 +30,12 @@ button:hover {
   transform: scale(1.05);
 }
 
+#clearbtn {
+  background-color: rgba(250, 250, 250, 0.15);
+  border-color: white;
+  color: white;
+}
+
 #clearbtn:hover span {
   display: none;
 }
