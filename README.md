@@ -1,12 +1,20 @@
-# A Workday Timetable
+# A Workday Timetable ☕️
 
-This project uses HTML, CSS, and Javascript to create a workday time-table. 📒 Based on the user story-
+Need an app which keeps track of your daily schedule (during the "business hours" of 9am to 5pm)? Workday timetable is simple calendar app that allows the user to save events for each hour of the day. The app keeps track of time by changing the colors of the "taskbox" as each hour passes. Users can update tasks by double clicking on the task box itself, entering the task for that time, and clicking the "save" button. The app stores user input, so users can close the page and return to check their schedules throughout the day.
+
+Workday timetable also allows users to quickly re-set their schedules each day by pressing the "New Day!" button at the top of the screen. This will clear the tasks in your timetable for a fresh start. 🍃
+
+[Click here to view the deployed application!](https://dieterichelizabeth.github.io/workday-timetable/)
+
+<img width="480" alt="Screen Shot 2022-04-16 at 2 17 37 PM" src="https://user-images.githubusercontent.com/95142863/163688762-e880422a-b158-4332-b6e0-8e81e0aedbc9.png">
+
+This project runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The app includes styling by Bootstrap, Open Iconic and Google Fonts. Based on the user story-
+
+```
 "AS AN employee with a busy schedule, I WANT to add important events to a daily planner, SO THAT I can manage my time effectively."
+```
 
-- Click here to [view the project](https://dieterichelizabeth.github.io/workday-timetable/)
-
-Workday timetable is simple calendar app that allows the user to save events for each hour of the day. The app keeps track of time by changing the colors of the taskbox throughout the day (Dark grey for the past, White for the future, and Light Grey for the present). Users can update tasks by double clicking on the task box itself, entering the task for that time, and clicking the blue "save" button. The app stores User input, so they can return to check their schedule throughout the day.
-This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery. The app includes styling by Bootstrap, Font Awesome, Open Iconic and Google Fonts. Developed on following criteria-
+Developed on following criteria-
 
 ```
 GIVEN I am using a daily planner to create a schedule
@@ -24,9 +32,21 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-## Screenshots
+## Installation/Download
 
-![App Screenshot](https://user-images.githubusercontent.com/95142863/152840048-eccbba23-7161-4e17-b72a-8844224109c6.png)
+To run this application locally, in the terminal-
+
+1. clone the repo
+
+```
+git clone https://github.com/dieterichelizabeth/workday-timetable.git
+```
+
+2. Open the index.html sheet in your browser
+
+Note: Make sure to use this app during the hours of 9am - 5pm. Else, the "task boxes" will either be greyed out, or white depending on the hour of the day.
+
+This application uses local storage- so you can run it, either locally or through the link at the top of this Readme, without having to worry about other users seeing your schedule.
 
 ## Documentation
 
