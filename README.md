@@ -4,6 +4,8 @@ Need an app which keeps track of your daily schedule (during the "business hours
 
 Workday timetable also allows users to quickly re-set their schedules each day by pressing the "New Day!" button at the top of the screen. This will clear the tasks in your timetable for a fresh start. 🍃
 
+Built with - HTML, CSS, jQuery, Moment.js, and Bootstrap.
+
 [Click here to view the deployed application!](https://dieterichelizabeth.github.io/workday-timetable/)
 
 <img width="480" alt="Screen Shot 2022-04-16 at 2 17 37 PM" src="https://user-images.githubusercontent.com/95142863/163688762-e880422a-b158-4332-b6e0-8e81e0aedbc9.png">
